@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PayPulse.Api/PayPulse.Api.csproj" />
+    <Project Path="src/PayPulse.Application/PayPulse.Application.csproj" />
+    <Project Path="src/PayPulse.Domain/PayPulse.Domain.csproj" />
+    <Project Path="src/PayPulse.Infrastructure/PayPulse.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PayPulse.IntegrationTests/PayPulse.IntegrationTests.csproj" />
+    <Project Path="tests/PayPulse.UnitTests/PayPulse.UnitTests.csproj" />
+  </Folder>
+</Solution>

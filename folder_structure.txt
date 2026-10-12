@@ -1,0 +1,321 @@
+.
+├── ASSIGNMENT
+│   ├── DATABASE_OPERATIONS_CHECKLIST.docx
+│   ├── DATABASE_OPERATIONS_CHECKLIST.md
+│   ├── DATABASE_OPERATIONS_SIMPLE_CHECKLIST.md
+│   └── generate_docx.py
+├── diagrams
+│   ├── data-diagram.md
+│   └── er-diagram.md
+├── Directory.Build.props
+├── docs
+│   ├── backend
+│   │   ├── api-endpoints.md
+│   │   ├── architecture.md
+│   │   ├── authentication-and-authorization.md
+│   │   ├── business-logic.md
+│   │   ├── configuration-and-running.md
+│   │   ├── database-integration.md
+│   │   ├── README.md
+│   │   ├── testing-report.md
+│   │   └── transaction-management.md
+│   ├── database
+│   │   ├── business-rules.md
+│   │   ├── database-overview.md
+│   │   ├── data-dictionary.md
+│   │   ├── entity-relationships.md
+│   │   ├── erd.md
+│   │   ├── indexes-and-performance.md
+│   │   ├── normalization.md
+│   │   ├── security-and-transactions.md
+│   │   ├── testing-report.md
+│   │   ├── transactions.md
+│   │   └── triggers-procedures-functions.md
+│   ├── frontend
+│   │   ├── api-integration.md
+│   │   ├── architecture.md
+│   │   ├── responsive-design.md
+│   │   ├── routes-and-permissions.md
+│   │   ├── running-and-building.md
+│   │   ├── testing-report.md
+│   │   └── ui-design-system.md
+│   └── testing
+│       └── transaction-test-report.md
+├── eslint.config.js
+├── folder_structure.txt
+├── index.html
+├── package.json
+├── package-lock.json
+├── PayPulse.slnx
+├── postcss.config.js
+├── public
+│   └── favicon.svg
+├── README.md
+├── sql
+│   ├── 00_create_database.sql
+│   ├── 01_schema.sql
+│   ├── 02_constraints_and_indexes.sql
+│   ├── 03_views.sql
+│   ├── 04_functions.sql
+│   ├── 05_procedures.sql
+│   ├── 06_triggers.sql
+│   ├── 07_seed_data.sql
+│   ├── 08_test_queries.sql
+│   ├── 09_reporting_queries.sql
+│   ├── README.md
+│   ├── tests
+│   │   ├── generate_seed_sql.py
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   ├── run_tests.py
+│   │   └── test_database.py
+│   └── transactions
+│       ├── 01_payroll_transaction.sql
+│       ├── 02_leave_approval_transaction.sql
+│       ├── 03_employee_creation_transaction.sql
+│       ├── 04_payment_recording_transaction.sql
+│       ├── 05_attendance_correction_transaction.sql
+│       ├── 06_transaction_rollback_tests.sql
+│       └── 07_concurrency_test_scenarios.sql
+├── src
+│   ├── app
+│   │   ├── config
+│   │   │   └── env.ts
+│   │   ├── providers
+│   │   │   └── AppProviders.tsx
+│   │   └── router
+│   │       └── index.tsx
+│   ├── components
+│   │   ├── common
+│   │   │   ├── Badge.tsx
+│   │   │   ├── ConfirmDialog.tsx
+│   │   │   ├── DataTable.tsx
+│   │   │   ├── EmptyState.tsx
+│   │   │   ├── ErrorState.tsx
+│   │   │   ├── FormField.tsx
+│   │   │   ├── Input.tsx
+│   │   │   ├── Modal.tsx
+│   │   │   ├── Select.tsx
+│   │   │   ├── Skeleton.tsx
+│   │   │   ├── StatCard.tsx
+│   │   │   └── Tabs.tsx
+│   │   └── layout
+│   │       ├── Breadcrumbs.tsx
+│   │       ├── GlobalSearchModal.tsx
+│   │       ├── Header.tsx
+│   │       ├── ProtectedRoute.tsx
+│   │       └── Sidebar.tsx
+│   ├── constants
+│   │   ├── roles.ts
+│   │   └── routes.ts
+│   ├── contexts
+│   │   ├── AuthContext.tsx
+│   │   ├── NotificationContext.tsx
+│   │   └── ToastContext.tsx
+│   ├── features
+│   │   └── dashboard
+│   │       ├── AdminDashboard.tsx
+│   │       ├── EmployeeDashboard.tsx
+│   │       ├── HrDashboard.tsx
+│   │       ├── PayrollDashboard.tsx
+│   │       └── SupervisorDashboard.tsx
+│   ├── hooks
+│   │   └── useEmployees.ts
+│   ├── layouts
+│   │   └── AppLayout.tsx
+│   ├── main.tsx
+│   ├── mocks
+│   │   ├── mockData.ts
+│   │   └── mockDb.ts
+│   ├── pages
+│   │   ├── attendance
+│   │   │   └── AttendancePage.tsx
+│   │   ├── audit
+│   │   │   └── AuditLogPage.tsx
+│   │   ├── auth
+│   │   │   ├── ForgotPasswordPage.tsx
+│   │   │   ├── LoginPage.tsx
+│   │   │   └── UnauthorizedPage.tsx
+│   │   ├── common
+│   │   │   └── NotFoundPage.tsx
+│   │   ├── dashboard
+│   │   │   └── DashboardPage.tsx
+│   │   ├── departments
+│   │   │   ├── DepartmentDetailPage.tsx
+│   │   │   └── DepartmentListPage.tsx
+│   │   ├── designations
+│   │   │   └── DesignationListPage.tsx
+│   │   ├── disbursements
+│   │   │   └── DisbursementListPage.tsx
+│   │   ├── employees
+│   │   │   ├── EmployeeDetailPage.tsx
+│   │   │   ├── EmployeeFormPage.tsx
+│   │   │   └── EmployeeListPage.tsx
+│   │   ├── leave
+│   │   │   └── LeavePage.tsx
+│   │   ├── payroll
+│   │   │   ├── PayrollDetailPage.tsx
+│   │   │   ├── PayrollListPage.tsx
+│   │   │   └── PayslipPage.tsx
+│   │   ├── reports
+│   │   │   ├── AttendanceReportPage.tsx
+│   │   │   ├── LeaveUtilizationReportPage.tsx
+│   │   │   ├── OvertimeReportPage.tsx
+│   │   │   ├── PayrollCostReportPage.tsx
+│   │   │   ├── ReportsHubPage.tsx
+│   │   │   ├── SalaryBandComplianceReportPage.tsx
+│   │   │   └── TaxProvidentReportPage.tsx
+│   │   ├── salary
+│   │   │   ├── SalaryEditPage.tsx
+│   │   │   └── SalaryListPage.tsx
+│   │   └── settings
+│   │       └── SettingsPage.tsx
+│   ├── PayPulse.Api
+│   │   ├── appsettings.Development.json
+│   │   ├── appsettings.json
+│   │   ├── Controllers
+│   │   │   ├── AttendanceController.cs
+│   │   │   ├── AuditController.cs
+│   │   │   ├── AuthController.cs
+│   │   │   ├── DepartmentsController.cs
+│   │   │   ├── DesignationsController.cs
+│   │   │   ├── DisbursementsController.cs
+│   │   │   ├── EmployeesController.cs
+│   │   │   ├── LeaveController.cs
+│   │   │   ├── PayrollController.cs
+│   │   │   ├── ReportsController.cs
+│   │   │   ├── SalariesController.cs
+│   │   │   └── SearchAndNotificationControllers.cs
+│   │   ├── Middleware
+│   │   │   └── ExceptionHandlingMiddleware.cs
+│   │   ├── PayPulse.Api.csproj
+│   │   ├── PayPulse.Api.http
+│   │   ├── Program.cs
+│   │   ├── Properties
+│   │   │   └── launchSettings.json
+│   │   └── Services
+│   │       └── CurrentUserService.cs
+│   ├── PayPulse.Application
+│   │   ├── Common
+│   │   │   ├── Extensions
+│   │   │   │   └── TransactionExtensions.cs
+│   │   │   ├── Interfaces
+│   │   │   │   ├── IAppDbContext.cs
+│   │   │   │   ├── IApplicationServices.cs
+│   │   │   │   └── IFeatureServices.cs
+│   │   │   └── Models
+│   │   │       └── CommonModels.cs
+│   │   ├── DependencyInjection.cs
+│   │   ├── DTOs
+│   │   │   ├── AttendanceDTOs.cs
+│   │   │   ├── AuditDTOs.cs
+│   │   │   ├── AuthDTOs.cs
+│   │   │   ├── DepartmentDTOs.cs
+│   │   │   ├── DesignationDTOs.cs
+│   │   │   ├── DisbursementDTOs.cs
+│   │   │   ├── EmployeeDTOs.cs
+│   │   │   ├── LeaveDTOs.cs
+│   │   │   ├── PayrollDTOs.cs
+│   │   │   ├── ReportDTOs.cs
+│   │   │   ├── SalaryDTOs.cs
+│   │   │   └── SearchAndNotificationDTOs.cs
+│   │   ├── PayPulse.Application.csproj
+│   │   └── Services
+│   │       ├── AttendanceService.cs
+│   │       ├── AuditService.cs
+│   │       ├── AuthService.cs
+│   │       ├── DepartmentService.cs
+│   │       ├── DesignationService.cs
+│   │       ├── DisbursementService.cs
+│   │       ├── EmployeeService.cs
+│   │       ├── LeaveService.cs
+│   │       ├── PayrollService.cs
+│   │       ├── ReportService.cs
+│   │       ├── SalaryService.cs
+│   │       └── SearchAndNotificationServices.cs
+│   ├── PayPulse.Domain
+│   │   ├── Entities
+│   │   │   ├── AttendanceLog.cs
+│   │   │   ├── Department.cs
+│   │   │   ├── Designation.cs
+│   │   │   ├── DisbursementRecord.cs
+│   │   │   ├── Employee.cs
+│   │   │   ├── LeaveAllocation.cs
+│   │   │   ├── LeaveRequest.cs
+│   │   │   ├── LeaveType.cs
+│   │   │   ├── MonthlyPayroll.cs
+│   │   │   ├── PayrollComponentDetail.cs
+│   │   │   ├── SalaryStructure.cs
+│   │   │   ├── SystemAuditLog.cs
+│   │   │   └── UserAccount.cs
+│   │   ├── Enums
+│   │   │   └── UserRoles.cs
+│   │   ├── Exceptions
+│   │   │   └── DomainExceptions.cs
+│   │   └── PayPulse.Domain.csproj
+│   ├── PayPulse.Infrastructure
+│   │   ├── DependencyInjection.cs
+│   │   ├── PayPulse.Infrastructure.csproj
+│   │   ├── Persistence
+│   │   │   ├── AppDbContext.cs
+│   │   │   └── Configurations
+│   │   │       └── EntityConfigurations.cs
+│   │   └── Services
+│   │       ├── BCryptPasswordHasher.cs
+│   │       └── JwtTokenGenerator.cs
+│   ├── services
+│   │   └── api
+│   │       ├── apiClient.ts
+│   │       ├── attendanceService.ts
+│   │       ├── auditService.ts
+│   │       ├── authService.ts
+│   │       ├── departmentService.ts
+│   │       ├── designationService.ts
+│   │       ├── disbursementService.ts
+│   │       ├── employeeService.ts
+│   │       ├── leaveService.ts
+│   │       ├── notificationService.ts
+│   │       ├── payrollService.ts
+│   │       ├── reportService.ts
+│   │       ├── salaryService.ts
+│   │       └── searchService.ts
+│   ├── styles
+│   │   └── index.css
+│   ├── test
+│   │   ├── authService.test.ts
+│   │   ├── employeeService.test.ts
+│   │   ├── LoginPage.test.tsx
+│   │   ├── payrollService.test.ts
+│   │   ├── ProtectedRoute.test.tsx
+│   │   ├── setup.ts
+│   │   ├── uiComponents.test.tsx
+│   │   └── utils.test.ts
+│   ├── types
+│   │   └── index.ts
+│   ├── utils
+│   │   ├── formatters.ts
+│   │   └── security.ts
+│   └── vite-env.d.ts
+├── tailwind.config.js
+├── tests
+│   ├── PayPulse.IntegrationTests
+│   │   ├── AuthenticationIntegrationTests.cs
+│   │   ├── CustomWebApplicationFactory.cs
+│   │   ├── EmployeeApiIntegrationTests.cs
+│   │   ├── LeaveAndAttendanceApiTests.cs
+│   │   ├── PayPulse.IntegrationTests.csproj
+│   │   ├── PayrollApiIntegrationTests.cs
+│   │   ├── ReportsAndAuditApiTests.cs
+│   │   └── Transactions
+│   │       └── TransactionIntegrationTests.cs
+│   └── PayPulse.UnitTests
+│       ├── LeavePolicyTests.cs
+│       ├── PayPulse.UnitTests.csproj
+│       ├── SalaryCalculationTests.cs
+│       └── SecurityAndAuthTests.cs
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+72 directories, 247 files
