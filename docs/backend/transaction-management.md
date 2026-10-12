@@ -92,11 +92,11 @@ This guarantees that:
 ```mermaid
 sequenceDiagram
     autonumber
-    actor Client as API Client / Supervisor
+    actor Client as "API Client / Supervisor"
     participant Ctrl as LeaveController
     participant Svc as LeaveService
-    participant Tx as ExecutionStrategy (EF Core)
-    participant DB as MySQL 8.4 (InnoDB)
+    participant Tx as "ExecutionStrategy (EF Core)"
+    participant DB as "MySQL 8.4 (InnoDB)"
 
     Client->>Ctrl: PUT /api/leave/applications/{id}/approve
     Ctrl->>Svc: ApproveLeaveRequestAsync(id, dto)

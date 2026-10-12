@@ -14,11 +14,11 @@ The MySQL InnoDB storage engine is configured to uphold strict ACID guarantees a
 
 ```mermaid
 graph TD
-    subgraph ACID Architecture
-        A[Atomicity] -->|InnoDB Undo Log| A1[Complete Commit or Complete Rollback]
-        B[Consistency] -->|Schema Constraints & Triggers| B1[Foreign Keys, CHECK, UNIQUE, Balances]
-        C[Isolation] -->|InnoDB MVCC & Row Locks| C1[REPEATABLE READ, Read Views, FOR UPDATE]
-        D[Durability] -->|InnoDB Redo Log & Doublewrite| D1[Write-Ahead Logging, fsync at commit]
+    subgraph ACID_Architecture ["ACID Architecture"]
+        A["Atomicity"] -->|"InnoDB Undo Log"| A1["Complete Commit or Complete Rollback"]
+        B["Consistency"] -->|"Schema Constraints & Triggers"| B1["Foreign Keys, CHECK, UNIQUE, Balances"]
+        C["Isolation"] -->|"InnoDB MVCC & Row Locks"| C1["REPEATABLE READ, Read Views, FOR UPDATE"]
+        D["Durability"] -->|"InnoDB Redo Log & Doublewrite"| D1["Write-Ahead Logging, fsync at commit"]
     end
 ```
 

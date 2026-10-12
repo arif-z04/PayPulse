@@ -29,11 +29,11 @@ flowchart LR
     end
 
     subgraph Database ["Database (Phase 1 & ACID)"]
-        MySQL[("MySQL 8.4 LTS Server<br/>(13 Relational Tables & Triggers)")]
+        MySQL[("MySQL 8.4 LTS Server - 13 Relational Tables & Triggers")]
     end
 
-    Client -->|HTTP / JSON (REST)| Backend
-    Backend -->|InnoDB Transactions & MVCC| Database
+    Client -->|"HTTP / JSON (REST)"| Backend
+    Backend -->|"InnoDB Transactions & MVCC"| Database
 ```
 
 ### Full-Stack Highlights

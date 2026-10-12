@@ -102,7 +102,7 @@ sequenceDiagram
     participant AuthZ as Role Authorization
     participant Controller as REST Controller
     participant Service as Application Service
-    participant DB as MySQL (via EF Core)
+    participant DB as "MySQL (via EF Core)"
 
     Client->>Middleware: HTTP Request
     Middleware->>Swagger: Pass

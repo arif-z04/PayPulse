@@ -92,21 +92,21 @@ All multi-step financial and lifecycle workflows enforce strict ACID transaction
 
 ```mermaid
 sequenceDiagram
-    participant API as ASP.NET Core API
-    participant DB as MySQL Database
-    participant AUD as Audit Trail
+    participant API as "ASP.NET Core API"
+    participant DB as "MySQL Database"
+    participant AUD as "Audit Trail"
 
     API->>DB: START TRANSACTION
-    API->>DB: SELECT ... FOR UPDATE (Acquire Row Lock)
+    API->>DB: SELECT ... FOR UPDATE - Acquire Row Lock
     API->>DB: SAVEPOINT sp_before_mutation
     API->>DB: Execute Mutation / Batch Processing
     alt Success
         DB->>AUD: INSERT into System_Audit_Log
         API->>DB: COMMIT
-        DB-->>API: 200 OK (Mutations Permanent)
+        DB-->>API: 200 OK - Mutations Permanent
     else Error / Failure
-        API->>DB: ROLLBACK (or ROLLBACK TO SAVEPOINT)
-        DB-->>API: 500 Error (State Reverted Cleanly)
+        API->>DB: ROLLBACK or ROLLBACK TO SAVEPOINT
+        DB-->>API: 500 Error - State Reverted Cleanly
     end
 ```
 

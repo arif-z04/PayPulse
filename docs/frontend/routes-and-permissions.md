@@ -10,16 +10,16 @@ PayPulse utilizes **React Router 7** with `createBrowserRouter`. Routes are part
 
 ```mermaid
 flowchart TD
-    Req[URL Request] --> Router{Router Dispatcher}
-    Router -->|/login, /forgot-password| Public[Public Pages]
-    Router -->|/unauthorized| Unauthorized[Unauthorized 403 Page]
-    Router -->|/* (Unknown)| NotFound[NotFound 404 Page]
-    Router -->|Protected Path| Guard{ProtectedRoute}
+    Req["URL Request"] --> Router{"Router Dispatcher"}
+    Router -->|"/login, /forgot-password"| Public["Public Pages"]
+    Router -->|"/unauthorized"| Unauthorized["Unauthorized 403 Page"]
+    Router -->|"/* (Unknown)"| NotFound["NotFound 404 Page"]
+    Router -->|"Protected Path"| Guard{"ProtectedRoute"}
 
-    Guard -->|Not Authenticated| RedirectLogin[Redirect to /login]
-    Guard -->|Insufficient Role| Redirect403[Redirect to /unauthorized]
-    Guard -->|Authorized| Shell[AppLayout Shell]
-    Shell --> View[Target Feature Page]
+    Guard -->|"Not Authenticated"| RedirectLogin["Redirect to /login"]
+    Guard -->|"Insufficient Role"| Redirect403["Redirect to /unauthorized"]
+    Guard -->|"Authorized"| Shell["AppLayout Shell"]
+    Shell --> View["Target Feature Page"]
 ```
 
 ---

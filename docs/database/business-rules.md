@@ -62,9 +62,9 @@ Daily biometric timekeeping records are captured in `Attendance_Log`:
 ```mermaid
 stateDiagram-v2
     [*] --> Pending : Employee Submits Application
-    Pending --> Approved : Manager Signs Off (Quota Verified)
+    Pending --> Approved : Manager Signs Off - Quota Verified
     Pending --> Rejected : Manager Denies Application
-    Approved --> Cancelled : Employee Cancels (Quota Restored)
+    Approved --> Cancelled : Employee Cancels - Quota Restored
     Rejected --> [*]
     Cancelled --> [*]
     Approved --> [*] : Leave Taken
